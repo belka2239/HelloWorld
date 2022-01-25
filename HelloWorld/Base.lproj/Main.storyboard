@@ -15,34 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKL-2Y-FnV">
-                                <rect key="frame" x="58" y="231" width="298" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKL-2Y-FnV">
+                                <rect key="frame" x="58" y="231" width="298" height="44.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY3-My-OrL">
-                                <rect key="frame" x="105.5" y="707" width="203" height="51"/>
-                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NUM-WM-kjD">
+                                <rect key="frame" x="97" y="669" width="220" height="118"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY3-My-OrL">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="51"/>
+                                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Show Text"/>
+                                        <connections>
+                                            <action selector="showTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DV-et-nao"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3f-OU-Jfo">
+                                        <rect key="frame" x="0.0" y="67" width="220" height="51"/>
+                                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Do something"/>
+                                        <connections>
+                                            <action selector="showTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bz5-VE-xI9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="203" id="7tF-qO-Rgg"/>
+                                    <constraint firstAttribute="width" constant="220" id="ODa-lO-9lP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Show Text"/>
-                                <connections>
-                                    <action selector="showTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DV-et-nao"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LY3-My-OrL" secondAttribute="bottom" constant="104" id="1km-QB-Y3F"/>
-                            <constraint firstItem="LY3-My-OrL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7IS-hf-YFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NUM-WM-kjD" secondAttribute="bottom" constant="75" id="Jn1-dl-0yM"/>
                             <constraint firstItem="LKL-2Y-FnV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="187" id="Znb-zW-Npt"/>
-                            <constraint firstItem="LY3-My-OrL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e3m-0d-JaT"/>
-                            <constraint firstItem="LKL-2Y-FnV" firstAttribute="centerX" secondItem="LY3-My-OrL" secondAttribute="centerX" id="hbp-RI-jpC"/>
+                            <constraint firstItem="NUM-WM-kjD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="caH-z2-aFc"/>
                         </constraints>
                     </view>
                     <connections>
