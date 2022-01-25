@@ -30,6 +30,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Show Text"/>
+                                <connections>
+                                    <action selector="showTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DV-et-nao"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -42,10 +45,14 @@
                             <constraint firstItem="LKL-2Y-FnV" firstAttribute="centerX" secondItem="LY3-My-OrL" secondAttribute="centerX" id="hbp-RI-jpC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloWorldLabel" destination="LKL-2Y-FnV" id="RAl-ja-3XL"/>
+                        <outlet property="showTextButton" destination="LY3-My-OrL" id="fyK-Ba-tzT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.652173913043484" y="101.78571428571428"/>
+            <point key="canvasLocation" x="149" y="53"/>
         </scene>
     </scenes>
 </document>
